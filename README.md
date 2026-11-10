@@ -1,77 +1,139 @@
-# Wafer keyboard
+# Wafer
 
-A 36-key wireless split keyboard built around a custom PCB and a thin aluminium
-case. This repository contains the KiCad sources, fabrication files, and CNC
-case models. [ZMK firmware lives separately](https://github.com/oleksandrmaslov/wafer-zmk-config).
+![Wafer title photo](assets/wafer_title.png)
 
-![Both halves of the Wafer keyboard](assets/wafer-both-halves.webp)
+Wafer is a 36 key ultra-thin split keyboard that stays between 4–8 mm thick,
+depending where you measure it. It runs on an ISP1807 with an nPM1300 PMIC, and
+the full aluminium case snaps together with magnets for a clean profile.
+Kailh PG1316S switches, a nice!view display and a 250 mAh LiPo in each half.
+It runs ZMK over Bluetooth LE or USB.
 
-[Project page, more photos & design story](https://oleksandrmaslov.github.io/portfolio/Wafer.html)
-· [Firmware](https://github.com/oleksandrmaslov/wafer-zmk-config)
-· [Personal builds & commercial permission](MANUFACTURING.md)
+The electronics and firmware work. The case has been made, but fit and
+manufacturing tolerances still need work. More photos and the full story are on
+[the project page](https://oleksandrmaslov.github.io/portfolio/Wafer.html).
 
-## Hardware
+The PCB, BOM and case models live here.
+[ZMK firmware and configuration](https://github.com/oleksandrmaslov/wafer-zmk-config)
+have their own repo.
 
-| Specification | Details |
-| --- | --- |
-| Layout | 36 keys; 18 per half |
-| Switches | Kailh PG1316S ultra-thin butterfly switches |
-| Controller | ISP1807 SiP with nRF52840 and integrated antenna |
-| Power | nPM1300 PMIC; 250 mAh LiPo per half |
-| Displays | One nice!view memory LCD per half |
-| Enclosure | Machined aluminium; 4–8 mm profile depending on location; magnets |
-| Tools | KiCad, Ergogen, and Fusion 360 |
+***
 
-**Status: working prototype.** Electronics and firmware work. The enclosure has
-been manufactured, but fit and manufacturing tolerances are still being refined.
-The fabrication files here belong to that prototype revision.
+## LAYOUT
 
-## Design and manufacturing files
+![WAFER layout](assets/wafer_layout_default.svg)
 
-| Files | Location |
-| --- | --- |
-| Schematics | [Main](pcb/wafer_keyboard_v3.kicad_sch), [right](pcb/wafer_keyboard_right.kicad_sch) |
-| PCB layouts | [Board](pcb/wafer_keyboard_v3.kicad_pcb), [production variant](pcb/wafer_keyboard_v3_production.kicad_pcb) |
-| Assembly data | [BOM](pcb/jlcpcb/production_files/BOM-wafer_keyboard_v3_production.csv), [component placement](pcb/jlcpcb/production_files/CPL-wafer_keyboard_v3_production.csv) |
-| Fabrication output | [Gerber archive](pcb/jlcpcb/production_files/GERBER-wafer_keyboard_v3_production.zip), [individual files](pcb/jlcpcb/gerber/) |
-| CNC case models | [Left](case/wafer_case_left.step), [right](case/wafer_case_right.step) |
-| Thread drawing | [PDF](case/Wafer%20threads%20drawing.pdf) |
+36 keys, 18 per half, with three thumb keys on each side. The switches are Kailh
+PG1316S, with PG1316 keycaps. The layout started in Ergogen; the board files are
+in KiCad and the case models were made in Fusion 360.
 
-Original manufacturing outputs and design backups are retained alongside the
-editable sources. The original hardware history was preserved when this
-repository was separated from the firmware.
+The firmware repo has the standard QWERTY layout and build instructions. This
+repo keeps the hardware files and manufacturing outputs.
 
-## Prototype photos
+***
+
+## PCB
+
+[Here](pcb/) you can find the PCB and production files for the Wafer. There are
+two versions, with mousebites for production and without them:
+
+- [PCB layout](pcb/wafer_keyboard_v3.kicad_pcb)
+- [Production PCB](pcb/wafer_keyboard_v3_production.kicad_pcb)
+- [Main schematic](pcb/wafer_keyboard_v3.kicad_sch) and [right schematic](pcb/wafer_keyboard_right.kicad_sch)
+- [Gerber archive](pcb/jlcpcb/production_files/GERBER-wafer_keyboard_v3_production.zip)
+
+![Wafer PCB with the switches, displays and electronics fitted](assets/IMG_3320.JPG)
+
+The controller is an ISP1807 SiP with an nRF52840 and integrated antenna. The
+nPM1300 handles charging and power, with a 250 mAh LiPo and one nice!view display
+on each half. The board also has USB-C and Tag-Connect SWD access.
+
+These are the files from the working prototype. Original fabrication outputs
+and backups are kept alongside the editable sources.
+
+***
+
+## BOM
+
+The full Bill of Materials for the Wafer keyboard is available here:
+
+- [BOM (JLCPCB production)](pcb/jlcpcb/production_files/BOM-wafer_keyboard_v3_production.csv)
+- [Component placement](pcb/jlcpcb/production_files/CPL-wafer_keyboard_v3_production.csv)
+- [Original prototype price breakdown](pcb/Keyboard%20Price.csv)
+
+The price breakdown records the prototype order and parts used at the time.
+
+***
+
+## CASE
+
+These models are mostly for CNC right now:
+
+- [Left case STEP](case/wafer_case_left.step)
+- [Right case STEP](case/wafer_case_right.step)
+- [Thread drawing](case/Wafer%20threads%20drawing.pdf)
+
+The full aluminium case uses magnets to hold the halves together and to stick
+to steel. It has been manufactured, but fit and manufacturing tolerances still
+need work before another run. The models here belong to that prototype revision.
 
 <p>
-  <img src="assets/wafer-assembly.webp" alt="Wafer assembly with the switch frames and exposed electronics" width="49%">
-  <img src="assets/wafer-aluminium-case.webp" alt="The machined aluminium enclosure viewed from its USB-C edge" width="49%">
+  <img src="assets/wafer-assembly.webp" alt="The keyboard during assembly, with its switch frames and electronics visible" width="49%">
+  <img src="assets/wafer-aluminium-case.webp" alt="The machined aluminium case viewed from its USB-C edge" width="49%">
 </p>
 
-## Licence and use
+***
 
-The design files, hardware documentation, and photographs authored by Oleksandr
-Maslov use **[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)**.
-The unmodified standard text is included in [LICENSE](LICENSE).
+## PHOTOS
 
-| Use | Permission |
-| --- | --- |
-| Study, share, or modify design files for noncommercial use | Allowed with attribution, a licence link, and notice of changes |
-| Build a keyboard for your own personal use | Allowed, including modified designs |
-| Pay a PCB fabricator or CNC shop for your personal copies | Explicitly allowed |
-| Commercial production, kits, or paid builds for sale | Separate written permission required |
+![Both halves of the assembled Wafer keyboard](assets/wafer-both-halves.webp)
 
-See [MANUFACTURING.md](MANUFACTURING.md) for personal-fabrication permission and
-commercial contact, and [photo sources](assets/README.md) for image attribution.
-Third-party material keeps its own applicable terms; firmware remains under MIT
-in its own repository. Historical licence grants remain valid.
+![Original side view of the thin Wafer keyboard](assets/IMG_3287.JPG)
 
-Copyright © 2026 Oleksandr Maslov.
+Art on the back:
 
-## Credits
+![Silkscreen artwork on the back of the Wafer PCB](assets/IMG_3324.JPG)
 
-Inspired by [TOTEM](https://github.com/GEIGEIGEIST/TOTEM) and
-[Mikefive](https://github.com/mikeholscher/zmk-config-mikefive).
-PCB help: [Rasmus Koit](https://github.com/rasmuskoit) and
-[Eden](https://github.com/galaxyeden). Case consultation:
-[Vlad Vodkin](https://t.me/vlad30303).
+And in KiCad:
+
+![The silkscreen artwork in KiCad](assets/Back_art.png)
+
+![Wafer case render](assets/wafer%20render.jpg)
+
+***
+
+## LICENSE
+
+The hardware design files, documentation and photos by Oleksandr Maslov use
+[CC BY-NC 4.0](LICENSE). You can study, share and modify them for noncommercial
+use with attribution, a licence link and notice of changes.
+
+Personal builds are allowed, including modified designs and paying a PCB
+fabricator or CNC shop to make your own copies. Commercial production, kits and
+paid builds for sale need separate written permission.
+[MANUFACTURING.md](MANUFACTURING.md) has the permissions and commercial contact;
+[photo credits](assets/README.md) has the image sources.
+
+Firmware stays under MIT in its own repo. Third-party material keeps its own
+applicable terms, and earlier licence grants remain valid.
+
+Copyright (c) 2026 Oleksandr Maslov.
+
+***
+
+## CREDITS
+
+### INSPIRATION
+
+Inspired by the [Totem Keyboard](https://github.com/GEIGEIGEIST/TOTEM) and [Mikehive](https://github.com/mikeholscher/zmk-config-mikefive), but with a slimmer profile and magnets for usability. Big thanks to Rasmus for introducing me to the ISP1807.
+
+### HELP FIXING THINGS
+
+People who helped me create this board and fix stuff:
+
+#### PCB
+
+- [Rasmus Koit](https://github.com/rasmuskoit)
+- [Eden](https://github.com/galaxyeden)
+#### CASE
+
+- [Vlad Vodkin (consulted me to build this case, huge thanks)](https://t.me/vlad30303)
