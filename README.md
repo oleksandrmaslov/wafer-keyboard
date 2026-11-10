@@ -10,16 +10,26 @@ The hardware-related commit history is retained. The files were verified
 byte-for-byte against firmware `main` at `507ab12` before being removed from its
 working tree. No PCB or case geometry was modified during the split.
 
-## Licence
+## Licence and use
 
-The existing restricted hardware/design licence remains in force; see [LICENSE](LICENSE)
-and [LICENSE-HARDWARE.md](LICENSE-HARDWARE.md). The root LICENSE is a copy of the
-existing hardware licence. Historical software licence files are retained for
-context and apply only to software, which remains in the firmware repository.
+Copyright (c) 2026 Oleksandr Maslov.
 
-A future personal-build/modification grant with separate commercial permission
-is under consideration. That proposal has not been adopted; the current licence
-still requires written permission for manufacture and modification.
+The design files and hardware documentation authored by Oleksandr Maslov use
+**[CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)**. The full,
+unmodified standard text is included in [LICENSE](LICENSE).
+
+| Use | Permission |
+| --- | --- |
+| Study, share, or modify design files for noncommercial use | Allowed with attribution, a licence link, and notice of changes. |
+| Build a keyboard for your own personal use | Allowed, including modified designs. |
+| Pay a PCB fabricator or CNC shop for your personal copies | Explicitly allowed. |
+| Commercial production, kits, or paid builds for sale | Separate written permission required. |
+
+See [MANUFACTURING.md](MANUFACTURING.md) for the additional personal-fabrication
+permission, commercial contact, and third-party rights. Software and firmware
+remain under MIT in the separate firmware repository. Historical licence files
+remain in Git history; the obsolete duplicate notices were removed from the
+current tree.
 
 ## CREDITS
 
