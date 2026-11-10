@@ -8,8 +8,7 @@ the full aluminium case snaps together with magnets for a clean profile.
 Kailh PG1316S switches, a nice!view display and a 250 mAh LiPo in each half.
 It runs ZMK over Bluetooth LE or USB.
 
-The electronics and firmware work. The case has been made, but fit and
-manufacturing tolerances still need work. More photos and the full story are on
+More photos and the full story are on
 [the project page](https://oleksandrmaslov.github.io/portfolio/Wafer.html).
 
 The PCB, BOM and case models live here.
@@ -47,8 +46,7 @@ The controller is an ISP1807 SiP with an nRF52840 and integrated antenna. The
 nPM1300 handles charging and power, with a 250 mAh LiPo and one nice!view display
 on each half. The board also has USB-C and Tag-Connect SWD access.
 
-These are the files from the working prototype. Original fabrication outputs
-and backups are kept alongside the editable sources.
+Original fabrication outputs and backups are kept alongside the editable sources.
 
 ***
 
@@ -58,23 +56,22 @@ The full Bill of Materials for the Wafer keyboard is available here:
 
 - [BOM (JLCPCB production)](pcb/jlcpcb/production_files/BOM-wafer_keyboard_v3_production.csv)
 - [Component placement](pcb/jlcpcb/production_files/CPL-wafer_keyboard_v3_production.csv)
-- [Original prototype price breakdown](pcb/Keyboard%20Price.csv)
+- [Original price breakdown](pcb/Keyboard%20Price.csv)
 
-The price breakdown records the prototype order and parts used at the time.
+The price breakdown records the original order and parts used at the time.
 
 ***
 
 ## CASE
 
-These models are mostly for CNC right now:
+These models are for CNC:
 
 - [Left case STEP](case/wafer_case_left.step)
 - [Right case STEP](case/wafer_case_right.step)
 - [Thread drawing](case/Wafer%20threads%20drawing.pdf)
 
 The full aluminium case uses magnets to hold the halves together and to stick
-to steel. It has been manufactured, but fit and manufacturing tolerances still
-need work before another run. The models here belong to that prototype revision.
+to steel.
 
 <p>
   <img src="assets/wafer-assembly.webp" alt="The keyboard during assembly, with its switch frames and electronics visible" width="49%">
