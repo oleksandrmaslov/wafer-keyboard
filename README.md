@@ -19,8 +19,6 @@ have their own repo.
 
 ## LAYOUT
 
-![WAFER layout](assets/wafer_layout_default.svg)
-
 36 keys, 18 per half, with three thumb keys on each side. The switches are Kailh
 PG1316S, with PG1316 keycaps. The layout started in Ergogen; the board files are
 in KiCad and the case models were made in Fusion 360.
